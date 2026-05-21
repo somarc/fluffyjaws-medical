@@ -1,0 +1,38 @@
+.quiz {
+  display: grid;
+  gap: 20px;
+}
+
+.quiz form {
+  display: grid;
+  gap: 18px;
+}
+
+.quiz fieldset {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  border: 1px solid rgb(20 61 54 / 14%);
+  border-radius: 8px;
+  padding: 18px;
+}
+
+.quiz legend {
+  padding: 0 6px;
+  font-family: var(--heading-font-family);
+  font-size: var(--heading-font-size-s);
+  font-weight: 600;
+}
+
+.quiz label {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.quiz-result {
+  min-height: 120px;
+  border-left: 4px solid var(--link-color);
+  padding: 8px 0 8px 18px;
+  background: var(--light-color);
+}

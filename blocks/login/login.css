@@ -1,0 +1,32 @@
+.login {
+  max-width: 760px;
+}
+
+.login-panel {
+  border: 1px solid rgb(20 61 54 / 14%);
+  border-radius: 8px;
+  padding: 24px;
+  background: var(--light-color);
+}
+
+.login-panel label {
+  display: grid;
+  gap: 6px;
+  margin: 16px 0;
+  font-weight: 600;
+}
+
+.login-panel input {
+  box-sizing: border-box;
+  width: 100%;
+  border: 1px solid rgb(20 61 54 / 22%);
+  border-radius: 6px;
+  padding: 10px 12px;
+  background: var(--background-color);
+  color: var(--text-color);
+}
+
+.login-status {
+  min-height: 1.6em;
+  color: var(--link-hover-color);
+}

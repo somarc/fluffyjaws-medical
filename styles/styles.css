@@ -40,6 +40,15 @@
   --nav-height: 64px;
 }
 
+:root[data-theme='dark'] {
+  --background-color: #101816;
+  --light-color: #1d2b28;
+  --dark-color: #d8eee8;
+  --text-color: #eef7f4;
+  --link-color: #81d8c9;
+  --link-hover-color: #b8eee5;
+}
+
 /* fallback fonts */
 @font-face {
   font-family: roboto-condensed-fallback;

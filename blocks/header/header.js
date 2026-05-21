@@ -4,6 +4,19 @@ import { loadFragment } from '../fragment/fragment.js';
 // media query match that indicates mobile/tablet width
 const isDesktop = window.matchMedia('(min-width: 900px)');
 
+const SEARCH_ITEMS = [
+  ['FluffyJaw Therapy', '/services/fluffyjaw-therapy'],
+  ['Stuffie Rehabilitation', '/services/stuffie-rehabilitation'],
+  ['Emergency Fluff', '/services/emergency-fluff'],
+  ['Family Care', '/services/family-care'],
+  ['Matted Muzzle Syndrome', '/conditions/matted-muzzle-syndrome'],
+  ['Hug Fatigue', '/conditions/hug-fatigue'],
+  ['Cleaning Without Panic', '/resources/cleaning-without-panic'],
+  ['Fluff Readiness Calculator', '/tools/fluff-readiness-calculator'],
+  ['Fluff Fit Quiz', '/tools/fluff-fit-quiz'],
+  ['Member Care Room', '/login'],
+];
+
 function closeOnEscape(e) {
   if (e.code === 'Escape') {
     const nav = document.getElementById('nav');
@@ -51,6 +64,89 @@ function openOnKeydown(e) {
 
 function focusNavSection() {
   document.activeElement.addEventListener('keydown', openOnKeydown);
+}
+
+function applyTheme(theme) {
+  document.documentElement.dataset.theme = theme;
+  try {
+    localStorage.setItem('fj-theme', theme);
+  } catch (e) {
+    // do nothing
+  }
+}
+
+function decorateThemeToggle(container) {
+  const button = document.createElement('button');
+  button.type = 'button';
+  button.className = 'nav-theme-toggle';
+  button.setAttribute('aria-label', 'Use dark theme');
+  button.textContent = 'Dark';
+
+  let activeTheme = 'light';
+  try {
+    activeTheme = localStorage.getItem('fj-theme') || activeTheme;
+  } catch (e) {
+    // do nothing
+  }
+  applyTheme(activeTheme);
+
+  const sync = () => {
+    const dark = document.documentElement.dataset.theme === 'dark';
+    button.textContent = dark ? 'Light' : 'Dark';
+    button.setAttribute('aria-label', dark ? 'Use light theme' : 'Use dark theme');
+  };
+  sync();
+
+  button.addEventListener('click', () => {
+    applyTheme(document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark');
+    sync();
+  });
+  container.append(button);
+}
+
+function decorateNavSearch(container) {
+  const form = document.createElement('form');
+  form.className = 'nav-search';
+  form.setAttribute('role', 'search');
+  form.innerHTML = `
+    <label>
+      <span>Search care topics</span>
+      <input type="search" name="q" autocomplete="off" placeholder="Search">
+    </label>
+    <ul hidden></ul>
+  `;
+  const input = form.querySelector('input');
+  const results = form.querySelector('ul');
+
+  const render = () => {
+    const query = input.value.trim().toLowerCase();
+    if (!query) {
+      results.hidden = true;
+      results.replaceChildren();
+      return;
+    }
+    const matches = SEARCH_ITEMS
+      .filter(([title]) => title.toLowerCase().includes(query))
+      .slice(0, 5);
+    results.replaceChildren(...matches.map(([title, href]) => {
+      const item = document.createElement('li');
+      item.innerHTML = `<a href="${href}">${title}</a>`;
+      return item;
+    }));
+    results.hidden = matches.length === 0;
+  };
+
+  form.addEventListener('input', render);
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const first = results.querySelector('a');
+    if (first) window.location.href = first.href;
+    else if (input.value.trim()) window.location.href = `/resources?q=${encodeURIComponent(input.value.trim())}`;
+  });
+  form.addEventListener('focusout', () => {
+    window.setTimeout(() => { results.hidden = true; }, 150);
+  });
+  container.prepend(form);
 }
 
 /**
@@ -150,6 +246,12 @@ export default async function decorate(block) {
         }
       });
     });
+  }
+
+  const navTools = nav.querySelector('.nav-tools');
+  if (navTools) {
+    decorateNavSearch(navTools);
+    decorateThemeToggle(navTools);
   }
 
   // hamburger for mobile

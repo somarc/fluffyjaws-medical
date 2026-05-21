@@ -24,6 +24,16 @@
       "URL": "/tools/*",
       "Title": "Tools | FluffyJaws Medical",
       "Description": "Interactive tools to estimate fluff readiness, triage care needs, and choose the right Stuffie support plan."
+    },
+    {
+      "URL": "/login",
+      "Title": "Member Care Room | FluffyJaws Medical",
+      "Description": "A fictional login and gated care-room demonstration for EDS runtime validation."
+    },
+    {
+      "URL": "/es/*",
+      "Title": "FluffyJaws Medical en Español",
+      "Description": "Localized FluffyJaws Medical content for validating nav, footer, and metadata variants."
     }
   ]
 }
