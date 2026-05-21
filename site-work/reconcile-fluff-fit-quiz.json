@@ -1,0 +1,16 @@
+{
+  "path": "/tools/fluff-fit-quiz",
+  "source": "https://main--fluffyjaws-medical--somarc.aem.page/tools/fluff-fit-quiz",
+  "status": "clean",
+  "summary": {
+    "errors": 0,
+    "warnings": 0,
+    "actions": 0
+  },
+  "actions": [],
+  "apply": {
+    "requested": false,
+    "performed": false,
+    "reason": "Automatic mutation is not implemented yet; this command currently emits a reconciliation plan."
+  }
+}

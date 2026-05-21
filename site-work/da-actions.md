@@ -50,3 +50,26 @@
 48. `node ../da-cli/bin/da.js preview page /forms/intake.json --format json`
 49. `node ../da-cli/bin/da.js content sheets /forms --format json`
 50. `node ../da-cli/bin/da.js preview explain /contact --format json`
+51. `node ../da-cli/bin/da.js content put-tree content --dry-run --format json`
+52. `node ../da-cli/bin/da.js pipeline quality-gate content/index.html --min-score 85 --format json`
+53. `node ../da-cli/bin/da.js pipeline quality-gate content/tools/fluff-fit-quiz.html --min-score 85 --format json`
+54. `node ../da-cli/bin/da.js pipeline quality-gate content/login.html --min-score 85 --format json`
+55. `node ../da-cli/bin/da.js --format json up --port 3002 --fallback none`
+56. `node ../da-cli/bin/da.js --commit content put-tree content --format json`
+57. `node ../da-cli/bin/da.js preview page /index.html --format json`
+58. `node ../da-cli/bin/da.js preview page /nav.html --format json`
+59. `node ../da-cli/bin/da.js preview page /footer.html --format json`
+60. `node ../da-cli/bin/da.js preview page /login.html --format json`
+61. `node ../da-cli/bin/da.js preview page /tools/fluff-fit-quiz.html --format json`
+62. `node ../da-cli/bin/da.js preview page /es/index.html --format json`
+63. `node ../da-cli/bin/da.js preview page /es/nav.html --format json`
+64. `node ../da-cli/bin/da.js preview page /es/footer.html --format json`
+65. `node ../da-cli/bin/da.js preview explain /login --format json`
+66. `node ../da-cli/bin/da.js preview explain /tools/fluff-fit-quiz --format json`
+67. `node ../da-cli/bin/da.js preview explain /es/ --format json`
+68. `node ../da-cli/bin/da.js preview explain /es/index --format json`
+69. `node ../da-cli/bin/da.js pipeline quality-gate https://main--fluffyjaws-medical--somarc.aem.page/tools/fluff-fit-quiz --min-score 85 --format json`
+70. `node ../da-cli/bin/da.js pipeline quality-gate https://main--fluffyjaws-medical--somarc.aem.page/login --min-score 85 --format json`
+71. `node ../da-cli/bin/da.js pipeline quality-gate https://main--fluffyjaws-medical--somarc.aem.page/es/ --min-score 85 --format json`
+72. `node ../da-cli/bin/da.js site reconcile /tools/fluff-fit-quiz --out site-work/reconcile-fluff-fit-quiz.json --format json`
+73. `node ../da-cli/bin/da.js site reconcile /login --out site-work/reconcile-login.json --format json`
