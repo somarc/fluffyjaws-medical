@@ -1,0 +1,85 @@
+{
+  "total": 7,
+  "limit": 7,
+  "offset": 0,
+  "data": [
+    {
+      "field": "stuffieName",
+      "type": "text",
+      "label": "Stuffie name",
+      "help": "Use the name your family uses most.",
+      "options": "",
+      "placeholder": "Professor Snuggleton",
+      "default": "",
+      "conditional": "",
+      "required": "TRUE"
+    },
+    {
+      "field": "carePath",
+      "type": "select",
+      "label": "Care path",
+      "help": "",
+      "options": "FluffyJaw Therapy, Stuffie Rehabilitation, Emergency Fluff, Family Care",
+      "placeholder": "",
+      "default": "",
+      "conditional": "",
+      "required": "TRUE"
+    },
+    {
+      "field": "changed",
+      "type": "textarea",
+      "label": "What changed?",
+      "help": "Share symptoms, recent wash cycles, travel, tears, or comfort changes.",
+      "options": "",
+      "placeholder": "",
+      "default": "",
+      "conditional": "",
+      "required": "TRUE"
+    },
+    {
+      "field": "preferredContact",
+      "type": "email",
+      "label": "Preferred contact",
+      "help": "",
+      "options": "",
+      "placeholder": "caregiver@example.com",
+      "default": "",
+      "conditional": "",
+      "required": "TRUE"
+    },
+    {
+      "field": "submit",
+      "type": "submit",
+      "label": "Prepare intake",
+      "help": "",
+      "options": "",
+      "placeholder": "",
+      "default": "",
+      "conditional": "",
+      "required": ""
+    },
+    {
+      "field": "reset",
+      "type": "reset",
+      "label": "Clear",
+      "help": "",
+      "options": "",
+      "placeholder": "",
+      "default": "",
+      "conditional": "",
+      "required": ""
+    },
+    {
+      "field": "",
+      "type": "confirmation",
+      "label": "/forms/intake-thanks",
+      "help": "",
+      "options": "",
+      "placeholder": "",
+      "default": "/forms/intake-thanks",
+      "conditional": "",
+      "required": ""
+    }
+  ],
+  ":type": "sheet"
+}

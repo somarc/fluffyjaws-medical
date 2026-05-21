@@ -19,3 +19,23 @@
 17. `node ../da-cli/bin/da.js preview page /index.html --format json`
 18. `node ../da-cli/bin/da.js pipeline quality-gate https://main--fluffyjaws-medical--somarc.aem.page/ --min-score 85 --format json`
 19. `node ../da-cli/bin/da.js site doctor fluffyjaws-medical --org somarc --deep --limit 25 --format json`
+20. `node ../da-cli/bin/da.js --org scdemos --repo demo content list / --format json`
+21. `node ../da-cli/bin/da.js --org scdemos --repo demo content list /forms --format json`
+22. `node ../da-cli/bin/da.js --org scdemos --repo demo content tree /forms --ext html --format json`
+23. `node ../da-cli/bin/da.js --org scdemos --repo demo content get /forms/contact-us.json -o content/forms/contact-us.json`
+24. `node ../da-cli/bin/da.js --org scdemos --repo demo content get /forms/contact-us-thanks.html -o content/forms/contact-us-thanks.html`
+25. `node ../da-cli/bin/da.js --org scdemos --repo demo content get /footer.html -o content/footer.html`
+26. `node ../da-cli/bin/da.js --org scdemos --repo demo content get /nav.html -o content/nav.html`
+27. `node ../da-cli/bin/da.js --org scdemos --repo demo content get /index.html -o content/index.html`
+28. `node ../da-cli/bin/da.js --org scdemos --repo demo content get /start-here.html -o content/start-here.html`
+29. `node ../da-cli/bin/da.js --org scdemos --repo demo content get /guided-journey.html -o content/guided-journey.html`
+30. `node ../da-cli/bin/da.js --org scdemos --repo demo content tree / --ext html --format json`
+31. `node ../da-cli/bin/da.js --org scdemos --repo demo content get /fragments/contact-us.html -o content/fragments/contact-us.html`
+32. `node ../da-cli/bin/da.js --org scdemos --repo demo content get /docs/library/blocks/form.html -o content/docs/library/blocks/form.html`
+33. `node ../da-cli/bin/da.js --org scdemos --repo demo content get /docs/library/blocks/form-thank-you.html -o content/docs/library/blocks/form-thank-you.html`
+34. `node ../da-cli/bin/da.js --org scdemos --repo demo content get /demo-docs/usecases/how-to-forms.html -o content/demo-docs/usecases/how-to-forms.html`
+35. `node ../da-cli/bin/da.js block inspect form --format json`
+36. `node ../da-cli/bin/da.js preview explain /contact --format json`
+37. `node ../da-cli/bin/da.js content put-tree content --dry-run --format json`
+38. `node ../da-cli/bin/da.js --format json up --port 3001 --fallback none`
+39. `node ../da-cli/bin/da.js content sheets /forms --format json`
