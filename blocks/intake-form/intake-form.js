@@ -1,6 +1,6 @@
 export default function decorate(block) {
   const form = document.createElement('form');
-  form.className = 'intake-form';
+  form.className = 'intake-form-fields';
   [...block.children].forEach((row) => {
     const [labelCell, typeCell] = [...row.children];
     const labelText = labelCell?.textContent.trim() || 'Field';
