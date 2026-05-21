@@ -39,3 +39,11 @@
 37. `node ../da-cli/bin/da.js content put-tree content --dry-run --format json`
 38. `node ../da-cli/bin/da.js --format json up --port 3001 --fallback none`
 39. `node ../da-cli/bin/da.js content sheets /forms --format json`
+40. `node ../da-cli/bin/da.js --commit content put-tree content --format json`
+41. `node ../da-cli/bin/da.js preview page /contact.html --format json`
+42. `node ../da-cli/bin/da.js preview page /forms/intake-thanks.html --format json`
+43. `node ../da-cli/bin/da.js content sheets /forms --format json`
+44. `node ../da-cli/bin/da.js preview explain /contact --format json`
+45. `node ../da-cli/bin/da.js --commit content put /contact.html content/contact.html --format json`
+46. `node ../da-cli/bin/da.js preview page /contact.html --format json`
+47. `node ../da-cli/bin/da.js preview explain /contact --format json`
