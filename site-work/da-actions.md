@@ -47,3 +47,6 @@
 45. `node ../da-cli/bin/da.js --commit content put /contact.html content/contact.html --format json`
 46. `node ../da-cli/bin/da.js preview page /contact.html --format json`
 47. `node ../da-cli/bin/da.js preview explain /contact --format json`
+48. `node ../da-cli/bin/da.js preview page /forms/intake.json --format json`
+49. `node ../da-cli/bin/da.js content sheets /forms --format json`
+50. `node ../da-cli/bin/da.js preview explain /contact --format json`
