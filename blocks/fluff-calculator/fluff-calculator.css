@@ -1,0 +1,42 @@
+.fluff-calculator {
+  display: grid;
+  gap: 18px;
+  border: 1px solid #d7ddd9;
+  border-radius: 8px;
+  padding: 20px;
+  background: #fff;
+}
+
+.fluff-calculator form {
+  display: grid;
+  gap: 16px;
+}
+
+.fluff-calculator label {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+  color: #143d36;
+  font-weight: 700;
+}
+
+.fluff-calculator select,
+.fluff-calculator input {
+  accent-color: #0c6b5d;
+}
+
+.fluff-calculator output {
+  font-weight: 400;
+}
+
+.fluff-calculator-result {
+  border-radius: 8px;
+  padding: 16px;
+  background: #edf5f2;
+}
+
+@media (width >= 900px) {
+  .fluff-calculator form {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

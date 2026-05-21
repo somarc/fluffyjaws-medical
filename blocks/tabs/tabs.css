@@ -1,0 +1,34 @@
+.tabs {
+  border: 1px solid #ccd8d4;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.tabs .tabs-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  border-bottom: 1px solid #ccd8d4;
+  background: #edf5f2;
+}
+
+.tabs .tabs-list button {
+  border: 0;
+  border-right: 1px solid #ccd8d4;
+  border-radius: 0;
+  padding: 14px 18px;
+  background: transparent;
+  color: #143d36;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.tabs .tabs-list button[aria-selected="true"] {
+  background: #fff;
+  color: #0c5f52;
+}
+
+.tabs .tabs-panels {
+  padding: 20px;
+}

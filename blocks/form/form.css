@@ -1,0 +1,26 @@
+.form .intake-form {
+  display: grid;
+  gap: 16px;
+  border: 1px solid #d7ddd9;
+  border-radius: 8px;
+  padding: 20px;
+  background: #f4f8f6;
+}
+
+.form label {
+  display: grid;
+  gap: 8px;
+  color: #143d36;
+  font-weight: 700;
+}
+
+.form input,
+.form select,
+.form textarea {
+  box-sizing: border-box;
+  width: 100%;
+  border: 1px solid #9eb3ad;
+  border-radius: 6px;
+  padding: 11px 12px;
+  background: #fff;
+}

@@ -1,0 +1,39 @@
+.search {
+  display: grid;
+  gap: 18px;
+}
+
+.search .search-box {
+  border: 1px solid #d7ddd9;
+  border-radius: 8px;
+  padding: 18px;
+  background: #f4f8f6;
+}
+
+.search label {
+  display: grid;
+  gap: 8px;
+  color: #143d36;
+  font-weight: 700;
+}
+
+.search input {
+  box-sizing: border-box;
+  width: 100%;
+  border: 1px solid #9eb3ad;
+  border-radius: 6px;
+  padding: 12px 14px;
+  background: #fff;
+}
+
+.search .search-results {
+  display: grid;
+  gap: 12px;
+  padding: 0;
+  list-style: none;
+}
+
+.search .search-results li {
+  border-bottom: 1px solid #e5ebe8;
+  padding-bottom: 12px;
+}

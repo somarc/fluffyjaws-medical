@@ -1,0 +1,29 @@
+{
+  "data": [
+    {
+      "URL": "/",
+      "Title": "FluffyJaws Medical | FluffyJaw Fluffies for Stuffies",
+      "Description": "A fictional full-service medical site for FluffyJaw Fluffies, stuffie rehabilitation, emergency fluff care, and family support."
+    },
+    {
+      "URL": "/services/*",
+      "Title": "Services | FluffyJaws Medical",
+      "Description": "Specialty FluffyJaw clinical services for preventive care, rehabilitation, urgent fluff replacement, and family care planning."
+    },
+    {
+      "URL": "/conditions/*",
+      "Title": "Condition Library | FluffyJaws Medical",
+      "Description": "Plain-language guidance for common stuffie conditions including matted muzzles, hug fatigue, and button eye strain."
+    },
+    {
+      "URL": "/resources*",
+      "Title": "Resources | FluffyJaws Medical",
+      "Description": "Care guides, articles, intake checklists, and related resources for FluffyJaw families."
+    },
+    {
+      "URL": "/tools/*",
+      "Title": "Tools | FluffyJaws Medical",
+      "Description": "Interactive tools to estimate fluff readiness, triage care needs, and choose the right Stuffie support plan."
+    }
+  ]
+}

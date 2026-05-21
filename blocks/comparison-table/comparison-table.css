@@ -1,0 +1,29 @@
+.comparison-table .comparison-table-scroll {
+  overflow-x: auto;
+  border: 1px solid #d7ddd9;
+  border-radius: 8px;
+}
+
+.comparison-table table {
+  width: 100%;
+  min-width: 680px;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #e5ebe8;
+  text-align: left;
+  vertical-align: top;
+}
+
+.comparison-table th {
+  background: #143d36;
+  color: #fff;
+}
+
+.comparison-table tr:last-child td {
+  border-bottom: 0;
+}

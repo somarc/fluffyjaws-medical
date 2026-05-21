@@ -1,0 +1,19 @@
+.related-articles > ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  padding: 0;
+  list-style: none;
+}
+
+.related-articles li {
+  border: 1px solid #d7ddd9;
+  border-radius: 8px;
+  padding: 18px;
+  background: #fff;
+}
+
+.related-articles h3 {
+  margin-top: 0;
+  font-size: var(--heading-font-size-s);
+}
