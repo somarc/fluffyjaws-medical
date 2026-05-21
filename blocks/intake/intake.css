@@ -1,4 +1,4 @@
-.intake-form .intake-form-fields {
+.intake .intake-form-fields {
   display: grid;
   gap: 16px;
   border: 1px solid #d7ddd9;
@@ -7,16 +7,16 @@
   background: #f4f8f6;
 }
 
-.intake-form label {
+.intake label {
   display: grid;
   gap: 8px;
   color: #143d36;
   font-weight: 700;
 }
 
-.intake-form input,
-.intake-form select,
-.intake-form textarea {
+.intake input,
+.intake select,
+.intake textarea {
   box-sizing: border-box;
   width: 100%;
   border: 1px solid #9eb3ad;
