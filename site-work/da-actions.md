@@ -73,3 +73,15 @@
 71. `node ../da-cli/bin/da.js pipeline quality-gate https://main--fluffyjaws-medical--somarc.aem.page/es/ --min-score 85 --format json`
 72. `node ../da-cli/bin/da.js site reconcile /tools/fluff-fit-quiz --out site-work/reconcile-fluff-fit-quiz.json --format json`
 73. `node ../da-cli/bin/da.js site reconcile /login --out site-work/reconcile-login.json --format json`
+74. `node ../da-cli/bin/da.js content put-tree content --dry-run --format json`
+75. `node ../da-cli/bin/da.js pipeline quality-gate content/index.html --min-score 85 --format json`
+76. `node ../da-cli/bin/da.js --commit content put-tree content --format json`
+77. `node ../da-cli/bin/da.js preview page /index.html --format json`
+78. `node ../da-cli/bin/da.js preview explain /index --format json`
+79. `node ../da-cli/bin/da.js preview page /media/fluffyjaws-medical.mp4 --format json`
+80. `node ../da-cli/bin/da.js pipeline quality-gate content/index.html --min-score 85 --format json`
+81. `node ../da-cli/bin/da.js content put-tree content --dry-run --format json`
+82. `node ../da-cli/bin/da.js --commit content put /index.html content/index.html --format json`
+83. `node ../da-cli/bin/da.js preview page /index.html --format json`
+84. `node ../da-cli/bin/da.js preview explain /index --format json`
+85. `node ../da-cli/bin/da.js preview explain /index --format json`
