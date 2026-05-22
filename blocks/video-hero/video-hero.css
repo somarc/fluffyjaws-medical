@@ -23,8 +23,8 @@
   position: relative;
   display: grid;
   align-content: end;
-  min-height: calc(100svh - var(--nav-height));
-  padding: 56px 24px;
+  min-height: clamp(560px, 76svh, 760px);
+  padding: 48px 24px 64px;
   overflow: hidden;
   background:
     linear-gradient(115deg, rgb(11 111 124 / 70%), transparent 42%),
@@ -40,6 +40,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: 52% 46%;
 }
 
 .video-hero::before,
@@ -55,8 +56,8 @@
   background:
     linear-gradient(90deg, rgb(247 243 234 / 9%) 1px, transparent 1px) 0 0 / 56px 56px,
     linear-gradient(180deg, rgb(247 243 234 / 7%) 1px, transparent 1px) 0 0 / 56px 56px,
-    linear-gradient(90deg, rgb(14 17 22 / 82%) 0%, rgb(14 17 22 / 50%) 42%, rgb(14 17 22 / 22%) 100%),
-    linear-gradient(0deg, rgb(14 17 22 / 78%) 0%, transparent 48%, rgb(14 17 22 / 42%) 100%);
+    linear-gradient(90deg, rgb(14 17 22 / 88%) 0%, rgb(14 17 22 / 58%) 42%, rgb(14 17 22 / 28%) 100%),
+    linear-gradient(0deg, rgb(14 17 22 / 82%) 0%, rgb(14 17 22 / 20%) 46%, rgb(14 17 22 / 52%) 100%);
 }
 
 .video-hero::after {
@@ -70,7 +71,7 @@
   position: relative;
   z-index: 3;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1120px;
   margin: 0 auto;
 }
 
@@ -79,7 +80,7 @@
   margin: 0;
   color: #fffaf0;
   font-size: 56px;
-  line-height: 0.9;
+  line-height: 0.94;
   text-shadow: 0 16px 48px rgb(0 0 0 / 42%);
 }
 
@@ -102,11 +103,11 @@
 
 @media (width >= 900px) {
   .video-hero {
-    padding: 72px 32px;
+    padding: 64px 32px 76px;
   }
 
   .video-hero h1 {
-    font-size: 108px;
+    font-size: 96px;
   }
 
   .video-hero p {
@@ -116,7 +117,7 @@
 
 @media (width >= 1200px) {
   .video-hero h1 {
-    font-size: 132px;
+    font-size: 112px;
   }
 }
 
