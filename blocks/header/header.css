@@ -15,22 +15,19 @@ header nav {
   box-sizing: border-box;
   display: grid;
   grid-template:
-    'hamburger brand tools' var(--nav-height)
-    'sections sections sections' 1fr / auto 1fr auto;
+    'hamburger brand' var(--nav-height)
+    'sections sections' 1fr
+    'tools tools' auto / auto 1fr;
   align-items: center;
-  gap: 0 18px;
+  gap: 0 14px;
   margin: auto;
   max-width: 1248px;
   height: var(--nav-height);
-  padding: 0 24px;
+  padding: 0 18px;
   font-family: var(--body-font-family);
 }
 
 header nav[aria-expanded='true'] {
-  grid-template:
-    'hamburger brand' var(--nav-height)
-    'sections sections' 1fr
-    'tools tools' var(--nav-height) / auto 1fr;
   overflow-y: auto;
   min-height: 100dvh;
 }
@@ -313,7 +310,7 @@ header nav .nav-sections ul > li > ul > li {
 /* tools */
 header nav .nav-tools {
   grid-area: tools;
-  display: flex;
+  display: none;
   align-items: center;
   gap: 8px;
 }
@@ -504,6 +501,10 @@ header .nav-search a:focus-visible {
 }
 
 @media (width >= 900px) {
+  header nav .nav-tools {
+    display: flex;
+  }
+
   header .nav-search {
     display: block;
   }
@@ -512,7 +513,44 @@ header .nav-search a:focus-visible {
 /* stylelint-enable no-descending-specificity */
 
 @media (width < 900px) {
+  header .nav-brand {
+    min-width: 0;
+  }
+
+  header .nav-brand a {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  header .nav-brand a::before {
+    flex: 0 0 auto;
+  }
+
+  header nav[aria-expanded='true'] .nav-sections {
+    padding-top: 12px;
+  }
+
+  header nav[aria-expanded='true'] .nav-sections ul {
+    margin: 0;
+  }
+
+  header nav[aria-expanded='true'] .nav-sections .default-content-wrapper > ul > li {
+    border-top: 1px solid rgb(20 61 54 / 10%);
+    padding: 14px 0;
+  }
+
+  header nav[aria-expanded='true'] .nav-sections .default-content-wrapper > ul > li > ul {
+    margin: 12px 0 0;
+    padding-left: 16px;
+  }
+
+  header nav[aria-expanded='true'] .nav-sections .default-content-wrapper > ul > li > ul > li {
+    padding: 7px 0;
+  }
+
   header nav[aria-expanded='true'] .nav-tools {
+    display: flex;
     align-self: start;
     justify-content: flex-start;
     flex-wrap: wrap;

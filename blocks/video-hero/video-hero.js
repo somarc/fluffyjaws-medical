@@ -29,8 +29,15 @@ export default function decorate(block) {
     const video = document.createElement('video');
     video.autoplay = true;
     video.muted = true;
+    video.defaultMuted = true;
     video.loop = true;
     video.playsInline = true;
+    video.preload = 'auto';
+    video.setAttribute('autoplay', '');
+    video.setAttribute('muted', '');
+    video.setAttribute('loop', '');
+    video.setAttribute('playsinline', '');
+    video.setAttribute('webkit-playsinline', '');
     video.setAttribute('aria-hidden', 'true');
     if (poster) video.poster = poster;
 
@@ -40,6 +47,13 @@ export default function decorate(block) {
     video.append(source);
     block.append(video);
     block.classList.add('has-video');
+
+    const playVideo = () => {
+      const playPromise = video.play();
+      if (playPromise) playPromise.catch(() => {});
+    };
+    if (document.visibilityState === 'visible') playVideo();
+    else document.addEventListener('visibilitychange', playVideo, { once: true });
   }
 
   block.append(content);
