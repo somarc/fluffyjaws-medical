@@ -97,3 +97,14 @@
 95. `node ../da-cli/bin/da.js content get /media/fluffyjaws-medical.mp4 --format json`
 96. `node ../da-cli/bin/da.js pipeline quality-gate content/index.html --min-score 85 --format json`
 97. `node ../da-cli/bin/da.js content put /index.html content/index.html --dry-run --format json`
+98. `node ../da-cli/bin/da.js --commit content put /index.html content/index.html --format json`
+99. `node ../da-cli/bin/da.js code sync /media/fluffyjaws-medical.mp4 --format json`
+100. `node ../da-cli/bin/da.js code sync /blocks/video-hero --format json`
+101. `node ../da-cli/bin/da.js code sync /blocks/video-hero/video-hero.js --format json`
+102. `node ../da-cli/bin/da.js code sync /blocks/video-hero/video-hero.css --format json`
+103. `node ../da-cli/bin/da.js preview page /index.html --format json`
+104. `node ../da-cli/bin/da.js preview explain /index --format json`
+105. `node ../da-cli/bin/da.js code status /media/fluffyjaws-medical.mp4 --format json`
+106. `node ../da-cli/bin/da.js code purge --help`
+107. `node ../da-cli/bin/da.js --commit code purge /media/fluffyjaws-medical.mp4 --format json`
+108. `node ../da-cli/bin/da.js preview explain /index --format json`
