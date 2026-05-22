@@ -11,6 +11,10 @@ export default function decorate(block) {
     return false;
   });
 
+  const picture = block.querySelector('picture');
+  const poster = picture?.querySelector('img')?.currentSrc || picture?.querySelector('img')?.src;
+  picture?.remove();
+
   const content = document.createElement('div');
   content.className = 'video-hero-content';
   [...block.children].forEach((row) => {
@@ -28,6 +32,7 @@ export default function decorate(block) {
     video.loop = true;
     video.playsInline = true;
     video.setAttribute('aria-hidden', 'true');
+    if (poster) video.poster = poster;
 
     const source = document.createElement('source');
     source.src = videoSrc;
