@@ -1,6 +1,6 @@
 .comparison-table .comparison-table-scroll {
   overflow-x: auto;
-  border: 1px solid #d7ddd9;
+  border: 1px solid var(--border-color);
   border-radius: 8px;
 }
 
@@ -8,20 +8,20 @@
   width: 100%;
   min-width: 680px;
   border-collapse: collapse;
-  background: #fff;
+  background: var(--surface-color);
 }
 
 .comparison-table th,
 .comparison-table td {
   padding: 14px 16px;
-  border-bottom: 1px solid #e5ebe8;
+  border-bottom: 1px solid var(--border-color);
   text-align: left;
   vertical-align: top;
 }
 
 .comparison-table th {
-  background: #143d36;
-  color: #fff;
+  background: var(--dark-color);
+  color: var(--background-color);
 }
 
 .comparison-table tr:last-child td {

@@ -1,32 +1,32 @@
 .tabs {
-  border: 1px solid #ccd8d4;
+  border: 1px solid var(--border-color);
   border-radius: 8px;
   overflow: hidden;
-  background: #fff;
+  background: var(--surface-color);
 }
 
 .tabs .tabs-list {
   display: flex;
   flex-wrap: wrap;
   gap: 0;
-  border-bottom: 1px solid #ccd8d4;
-  background: #edf5f2;
+  border-bottom: 1px solid var(--border-color);
+  background: var(--light-color);
 }
 
 .tabs .tabs-list button {
   border: 0;
-  border-right: 1px solid #ccd8d4;
+  border-right: 1px solid var(--border-color);
   border-radius: 0;
   padding: 14px 18px;
   background: transparent;
-  color: #143d36;
+  color: var(--text-color);
   font-weight: 700;
   cursor: pointer;
 }
 
 .tabs .tabs-list button[aria-selected="true"] {
-  background: #fff;
-  color: #0c5f52;
+  background: var(--surface-color);
+  color: var(--link-color);
 }
 
 .tabs .tabs-panels {

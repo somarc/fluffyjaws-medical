@@ -1,10 +1,10 @@
 .fluff-calculator {
   display: grid;
   gap: 18px;
-  border: 1px solid #d7ddd9;
+  border: 1px solid var(--border-color);
   border-radius: 8px;
   padding: 20px;
-  background: #fff;
+  background: var(--surface-color);
 }
 
 .fluff-calculator form {
@@ -16,13 +16,13 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 8px;
-  color: #143d36;
+  color: var(--text-color);
   font-weight: 700;
 }
 
 .fluff-calculator select,
 .fluff-calculator input {
-  accent-color: #0c6b5d;
+  accent-color: var(--link-color);
 }
 
 .fluff-calculator output {
@@ -32,7 +32,7 @@
 .fluff-calculator-result {
   border-radius: 8px;
   padding: 16px;
-  background: #edf5f2;
+  background: var(--light-color);
 }
 
 @media (width >= 900px) {
