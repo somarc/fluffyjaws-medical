@@ -87,3 +87,11 @@
 85. `node ../da-cli/bin/da.js preview explain /index --format json`
 86. `node ../da-cli/bin/da.js --format json up --port 3003 --fallback none`
 87. `node ../da-cli/bin/da.js code --help`
+88. `node ../da-cli/bin/da.js pipeline quality-gate content/index.html --min-score 85 --format json`
+89. `node ../da-cli/bin/da.js content put /index.html content/index.html --dry-run --format json`
+90. `node ../da-cli/bin/da.js --commit content put /index.html content/index.html --format json`
+91. `node ../da-cli/bin/da.js --commit content delete /media/fluffyjaws-medical.mp4 --format json`
+92. `node ../da-cli/bin/da.js code sync /videos/fluffyjaws-medical.mp4 --format json`
+93. `node ../da-cli/bin/da.js preview page /index.html --format json`
+94. `node ../da-cli/bin/da.js preview explain /index --format json`
+95. `node ../da-cli/bin/da.js content get /media/fluffyjaws-medical.mp4 --format json`
