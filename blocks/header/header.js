@@ -80,7 +80,7 @@ function decorateThemeToggle(container) {
   button.type = 'button';
   button.className = 'nav-theme-toggle';
   button.setAttribute('aria-label', 'Use dark theme');
-  button.textContent = 'Dark';
+  button.innerHTML = '<span aria-hidden="true"></span><span class="nav-theme-label">Dark</span>';
 
   let activeTheme = 'light';
   try {
@@ -92,7 +92,8 @@ function decorateThemeToggle(container) {
 
   const sync = () => {
     const dark = document.documentElement.dataset.theme === 'dark';
-    button.textContent = dark ? 'Light' : 'Dark';
+    button.classList.toggle('is-dark', dark);
+    button.querySelector('.nav-theme-label').textContent = dark ? 'Light' : 'Dark';
     button.setAttribute('aria-label', dark ? 'Use light theme' : 'Use dark theme');
   };
   sync();
@@ -102,6 +103,55 @@ function decorateThemeToggle(container) {
     sync();
   });
   container.append(button);
+}
+
+function decorateLanguageSelect(navSections, container) {
+  if (!navSections) return;
+  const languageLinks = [...navSections.querySelectorAll('a')]
+    .filter((link) => ['/es/', '/'].includes(new URL(link.href).pathname));
+  const options = languageLinks
+    .map((link) => {
+      const { pathname } = new URL(link.href);
+      if (pathname === '/es/') return { label: 'ES', href: link.getAttribute('href') };
+      if (pathname === '/') return { label: 'EN', href: link.getAttribute('href') };
+      return null;
+    })
+    .filter(Boolean);
+
+  if (!options.length) return;
+
+  languageLinks.forEach((link) => {
+    const item = link.closest('li');
+    if (item) item.remove();
+  });
+
+  const wrapper = document.createElement('label');
+  wrapper.className = 'nav-language';
+  wrapper.innerHTML = '<span>Language</span>';
+  const select = document.createElement('select');
+  select.setAttribute('aria-label', 'Language');
+  const currentPath = window.location.pathname;
+
+  const normalized = options.some((option) => option.label === 'ES')
+    ? [
+      { label: 'EN', href: '/' },
+      { label: 'ES', href: '/es/' },
+    ]
+    : options;
+
+  normalized.forEach(({ label, href }) => {
+    const option = document.createElement('option');
+    option.value = href;
+    option.textContent = label;
+    option.selected = label === 'ES' ? currentPath.startsWith('/es/') : !currentPath.startsWith('/es/');
+    select.append(option);
+  });
+
+  select.addEventListener('change', () => {
+    window.location.href = select.value;
+  });
+  wrapper.append(select);
+  container.append(wrapper);
 }
 
 function decorateNavSearch(container) {
@@ -251,6 +301,7 @@ export default async function decorate(block) {
   const navTools = nav.querySelector('.nav-tools');
   if (navTools) {
     decorateNavSearch(navTools);
+    decorateLanguageSelect(navSections, navTools);
     decorateThemeToggle(navTools);
   }
 
