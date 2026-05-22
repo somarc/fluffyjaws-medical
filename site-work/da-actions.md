@@ -95,3 +95,5 @@
 93. `node ../da-cli/bin/da.js preview page /index.html --format json`
 94. `node ../da-cli/bin/da.js preview explain /index --format json`
 95. `node ../da-cli/bin/da.js content get /media/fluffyjaws-medical.mp4 --format json`
+96. `node ../da-cli/bin/da.js pipeline quality-gate content/index.html --min-score 85 --format json`
+97. `node ../da-cli/bin/da.js content put /index.html content/index.html --dry-run --format json`
