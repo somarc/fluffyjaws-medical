@@ -86,3 +86,4 @@
 84. `node ../da-cli/bin/da.js preview explain /index --format json`
 85. `node ../da-cli/bin/da.js preview explain /index --format json`
 86. `node ../da-cli/bin/da.js --format json up --port 3003 --fallback none`
+87. `node ../da-cli/bin/da.js code --help`
