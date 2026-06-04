@@ -1,0 +1,25 @@
+{
+  "total": 1,
+  "offset": 0,
+  "limit": 1,
+  "columns": [
+    "sku",
+    "url",
+    "title",
+    "price",
+    "image",
+    "category",
+    "summary"
+  ],
+  "data": [
+    {
+      "sku": "FJM-VCM-002",
+      "url": "/products/diagnostic-tools/comfort-monitor",
+      "title": "Comfort Monitor",
+      "price": "$64.00",
+      "image": "/media/fluffyjaws-clinic.png",
+      "category": "Diagnostic Tools",
+      "summary": "A soft bedside tracker for hug cadence, loft trend, and visible flatness observations."
+    }
+  ]
+}

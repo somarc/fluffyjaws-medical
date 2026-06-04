@@ -142,15 +142,81 @@ function categoryPageHtml() {
 <header></header>
 <main>
   <div>
-    <h1>Inventory Catalog</h1>
-    <p>A fictional 1,000-SKU commerce surface for validating EDS catalog scale, search, filters, and preview confidence across distinct product families, care settings, materials, and category visuals.</p>
+    <p><a href="/products/">Products</a> / Inventory Catalog</p>
   </div>
   <div>
+    <h1>Inventory Catalog</h1>
+    <p>A fictional 1,000-SKU commerce surface for validating EDS catalog scale, search, filters, and preview confidence across distinct product families, care settings, materials, and category visuals.</p>
+    <p><strong><a href="/contact">Request a consult</a></strong> <em><a href="/products/">Shop by category</a></em></p>
+  </div>
+  <div>
+    <h2>All Products</h2>
     <div class="product-grid">
       <div>
         <div><a href="index.json">index.json</a></div>
       </div>
     </div>
+  </div>
+  <div>
+    <h2>Validation Coverage</h2>
+    <p>This catalog validates generated PDPs, category filters, price sorting, product imagery, and preview coverage across 1,000 fictional SKUs.</p>
+  </div>
+</main>
+<footer></footer>
+</body>
+</html>
+`;
+}
+
+function productsHubHtml() {
+  return `<!doctype html>
+<html>
+<head>
+  <title>Products | FluffyJaws Medical</title>
+  <meta name="description" content="Browse fictional FluffyJaws Medical comfort devices, diagnostic tools, recovery kits, and full inventory catalog.">
+  <meta name="nav" content="/nav">
+  <meta name="footer" content="/footer">
+</head>
+<body>
+<header></header>
+<main>
+  <div>
+    <h1>Products</h1>
+    <p>Fictional care products for validating EDS commerce flows, catalog feeds, PDP generation, and large-inventory browsing.</p>
+    <p><strong><a href="/products/inventory/">Browse all products</a></strong> <em><a href="/contact">Request a consult</a></em></p>
+  </div>
+  <div>
+    <h2>Shop by Care Need</h2>
+    <div class="cards">
+      <div>
+        <div><a href="/media/inventory-comfort.svg">Comfort Devices</a></div>
+        <div><a href="/products/comfort-devices/">Comfort Devices</a></div>
+        <div>Weighted wraps and soft supports for high-hug recovery cycles.</div>
+      </div>
+      <div>
+        <div><a href="/media/inventory-diagnostic.svg">Diagnostic Tools</a></div>
+        <div><a href="/products/diagnostic-tools/">Diagnostic Tools</a></div>
+        <div>Observation aids for hug cadence, visible flatness, and comfort trend checks.</div>
+      </div>
+      <div>
+        <div><a href="/media/inventory-recovery.svg">Recovery Kits</a></div>
+        <div><a href="/products/recovery-kits/">Recovery Kits</a></div>
+        <div>Home-care bundles for post-visit rest, grooming, and bedtime recovery.</div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <h2>Featured Products</h2>
+    <div class="product-grid">
+      <div>
+        <div><a href="/products/comfort-devices/index.json">index.json</a></div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <h2>Catalog Scale</h2>
+    <p>The inventory catalog exercises a 1,000-SKU feed with search, category filters, price sorting, generated PDPs, and reusable category imagery.</p>
+    <p><strong><a href="/products/inventory/">Open inventory catalog</a></strong></p>
   </div>
 </main>
 <footer></footer>
@@ -230,10 +296,12 @@ async function main() {
   const products = Array.from({ length: TOTAL }, (_, index) => productFor(index));
 
   await mkdir('content/products/inventory', { recursive: true });
+  await mkdir('content/products', { recursive: true });
   await mkdir('products/inventory', { recursive: true });
   await mkdir('media', { recursive: true });
 
   await writeJsonMirrors(products);
+  await writeFile('content/products/index.html', productsHubHtml());
   await writeFile('content/products/inventory/index.html', categoryPageHtml());
 
   await Promise.all(products.map(async (product, index) => {

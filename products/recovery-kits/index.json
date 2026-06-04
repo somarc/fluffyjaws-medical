@@ -1,0 +1,25 @@
+{
+  "total": 1,
+  "offset": 0,
+  "limit": 1,
+  "columns": [
+    "sku",
+    "url",
+    "title",
+    "price",
+    "image",
+    "category",
+    "summary"
+  ],
+  "data": [
+    {
+      "sku": "FJM-RCK-003",
+      "url": "/products/recovery-kits/nap-recovery-kit",
+      "title": "Nap Recovery Kit",
+      "price": "$72.00",
+      "image": "/media/fluffyjaws-clinic.png",
+      "category": "Recovery Kits",
+      "summary": "A home-care bundle for post-visit rest, gentle brushing, and calm bedtime recovery."
+    }
+  ]
+}
