@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="675" viewBox="0 0 600 450" role="img" aria-label="Recovery Kits">
+  <rect width="600" height="450" fill="#ffe2da"/>
+  <path d="M0 354C92 316 150 388 244 344C332 303 410 266 600 318V450H0Z" fill="#a65f50" opacity=".18"/>
+  <path d="M0 92C120 126 174 44 292 86C390 121 462 138 600 86V0H0Z" fill="#fff" opacity=".5"/>
+  <path d="M300 82 386 212H214L300 82Z" fill="#a65f50"/><path d="M300 130 338 190H262L300 130Z" fill="white" opacity=".7"/>
+  <text x="300" y="316" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#18211f">Recovery Kits</text>
+  <text x="300" y="352" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#38433f">FluffyJaws Medical inventory</text>
+</svg>

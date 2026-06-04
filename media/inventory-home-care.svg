@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="675" viewBox="0 0 600 450" role="img" aria-label="Home Care Supplies">
+  <rect width="600" height="450" fill="#f4ead4"/>
+  <path d="M0 354C92 316 150 388 244 344C332 303 410 266 600 318V450H0Z" fill="#7f6a3f" opacity=".18"/>
+  <path d="M0 92C120 126 174 44 292 86C390 121 462 138 600 86V0H0Z" fill="#fff" opacity=".5"/>
+  <polygon points="300,76 394,144 358,252 242,252 206,144" fill="#7f6a3f"/><circle cx="300" cy="166" r="34" fill="white" opacity=".72"/>
+  <text x="300" y="316" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#18211f">Home Care Supplies</text>
+  <text x="300" y="352" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#38433f">FluffyJaws Medical inventory</text>
+</svg>

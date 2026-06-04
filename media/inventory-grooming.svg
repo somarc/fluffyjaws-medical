@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="675" viewBox="0 0 600 450" role="img" aria-label="Grooming Recovery">
+  <rect width="600" height="450" fill="#ddf3fb"/>
+  <path d="M0 354C92 316 150 388 244 344C332 303 410 266 600 318V450H0Z" fill="#5f8fa6" opacity=".18"/>
+  <path d="M0 92C120 126 174 44 292 86C390 121 462 138 600 86V0H0Z" fill="#fff" opacity=".5"/>
+  <circle cx="300" cy="170" r="74" fill="#5f8fa6"/><circle cx="328" cy="144" r="18" fill="white" opacity=".75"/>
+  <text x="300" y="316" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#18211f">Grooming Recovery</text>
+  <text x="300" y="352" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#38433f">FluffyJaws Medical inventory</text>
+</svg>
