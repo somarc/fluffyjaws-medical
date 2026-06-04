@@ -302,7 +302,9 @@ async function main() {
 
   await writeJsonMirrors(products);
   await writeFile('content/products/index.html', productsHubHtml());
+  await writeFile('content/products.html', productsHubHtml());
   await writeFile('content/products/inventory/index.html', categoryPageHtml());
+  await writeFile('content/products/inventory.html', categoryPageHtml());
 
   await Promise.all(products.map(async (product, index) => {
     await writeFile(`content/products/inventory/${slug(index + 1)}.html`, productPageHtml(product));
