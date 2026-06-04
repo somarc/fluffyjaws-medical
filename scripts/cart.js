@@ -168,9 +168,15 @@ function createDrawer() {
   `;
 
   drawer.addEventListener('click', (event) => {
-    if (event.target === drawer) drawer.classList.remove('open');
+    if (event.target === drawer) {
+      drawer.classList.remove('open');
+      drawer.setAttribute('aria-hidden', 'true');
+    }
   });
-  drawer.querySelector('.cart-drawer-close').addEventListener('click', () => drawer.classList.remove('open'));
+  drawer.querySelector('.cart-drawer-close').addEventListener('click', () => {
+    drawer.classList.remove('open');
+    drawer.setAttribute('aria-hidden', 'true');
+  });
   document.body.append(drawer);
   return drawer;
 }
@@ -183,8 +189,15 @@ function createLauncher(drawer) {
   launcher.addEventListener('click', () => {
     renderCart(drawer);
     drawer.classList.add('open');
+    drawer.setAttribute('aria-hidden', 'false');
   });
-  document.body.append(launcher);
+  const nav = document.querySelector('header nav');
+  if (nav) {
+    launcher.classList.add('nav-cart-launcher');
+    nav.append(launcher);
+  } else {
+    document.body.append(launcher);
+  }
   return launcher;
 }
 

@@ -15,9 +15,9 @@ header nav {
   box-sizing: border-box;
   display: grid;
   grid-template:
-    'hamburger brand' var(--nav-height)
-    'sections sections' 1fr
-    'tools tools' auto / auto 1fr;
+    'hamburger brand cart' var(--nav-height)
+    'sections sections sections' 1fr
+    'tools tools tools' auto / auto 1fr auto;
   align-items: center;
   gap: 0 14px;
   margin: auto;
@@ -72,6 +72,10 @@ header nav .nav-hamburger {
   height: 22px;
   display: flex;
   align-items: center;
+}
+
+header nav .nav-cart-launcher {
+  grid-area: cart;
 }
 
 header nav .nav-hamburger button {
