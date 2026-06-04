@@ -1,3 +1,5 @@
+import { addToCart } from '../../scripts/cart.js';
+
 const PAGE_SIZE = 48;
 
 function normalizeText(value) {
@@ -39,7 +41,13 @@ function productCard(product) {
   meta.className = 'product-grid-meta';
   meta.textContent = [product.sku, product.price].filter(Boolean).join(' | ');
 
-  body.append(eyebrow, title, summary, meta);
+  const cartButton = document.createElement('button');
+  cartButton.type = 'button';
+  cartButton.className = 'button accent product-grid-cart';
+  cartButton.textContent = 'Add to cart';
+  cartButton.addEventListener('click', () => addToCart(product));
+
+  body.append(eyebrow, title, summary, meta, cartButton);
   card.append(link, body);
   return card;
 }

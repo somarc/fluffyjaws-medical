@@ -73,6 +73,11 @@
   padding: 20px;
 }
 
+.product-grid-cart {
+  width: 100%;
+  margin-top: 12px;
+}
+
 .product-grid-category,
 .product-grid-meta {
   margin: 0 0 8px;
