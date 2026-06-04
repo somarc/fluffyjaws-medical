@@ -1,0 +1,43 @@
+{
+  "total": 3,
+  "offset": 0,
+  "limit": 3,
+  "columns": [
+    "sku",
+    "url",
+    "title",
+    "price",
+    "image",
+    "category",
+    "summary"
+  ],
+  "data": [
+    {
+      "sku": "FJM-HRW-001",
+      "url": "/products/comfort-devices/hug-recovery-wrap",
+      "title": "Hug Recovery Wrap",
+      "price": "$48.00",
+      "image": "/media/fluffyjaws-clinic.png",
+      "category": "Comfort Devices",
+      "summary": "A weighted restorative wrap for stuffies recovering from high-intensity cuddle cycles."
+    },
+    {
+      "sku": "FJM-VCM-002",
+      "url": "/products/diagnostic-tools/comfort-monitor",
+      "title": "Comfort Monitor",
+      "price": "$64.00",
+      "image": "/media/fluffyjaws-clinic.png",
+      "category": "Diagnostic Tools",
+      "summary": "A soft bedside tracker for hug cadence, loft trend, and visible flatness observations."
+    },
+    {
+      "sku": "FJM-RCK-003",
+      "url": "/products/recovery-kits/nap-recovery-kit",
+      "title": "Nap Recovery Kit",
+      "price": "$72.00",
+      "image": "/media/fluffyjaws-clinic.png",
+      "category": "Recovery Kits",
+      "summary": "A home-care bundle for post-visit rest, gentle brushing, and calm bedtime recovery."
+    }
+  ]
+}
